@@ -29,15 +29,26 @@
         padding="80"
     >
         <Label
-            text="Variant: Contained"
+            text="Button: Primary"
             class="section-title"
         ></Label>
 
+        <MDButton class="button text" text="Zeplin" backgroundColor="#fe5000" borderRadius="50"></MDButton>
 
-        <MDButton width="136" height="48" class="text" text="Zeplin" backgroundColor="#fe5000" borderRadius="50"></MDButton>
-
-        <StackLayout width="136" height="48" backgroundColor="#fe5000" borderRadius="50">
+        <StackLayout class="button" backgroundColor="#fe5000" borderRadius="50">
             <MDActivityIndicator horizontalAlignment="center" width="30" color="white" busy="true"></MDActivityIndicator>
+        </StackLayout>
+
+
+        <Label
+        text="Button: Secondary"
+        class="section-title"
+        ></Label>
+
+        <MDButton class="button text border-props" borderRadius="50" text="Button" rippleColor="#fe5000" variant="outline"></MDButton>
+        <!-- <MDButton width="136" variant="text" height="48" class="text" text="Zeplin"  borderRadius="50"></MDButton> -->
+        <StackLayout class="button text border-props m-t-20" borderRadius="50">
+            <MDActivityIndicator horizontalAlignment="center" width="30" color="#fe5000" busy="true"></MDActivityIndicator>
         </StackLayout>
 
         <MDButton
