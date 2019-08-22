@@ -26,59 +26,46 @@
         flexDirection="column"
         justifyContent="space-around"
         alignItems="center"
-        padding="80"
-    >
-        <Label
-            text="Button: Primary"
-            class="section-title"
-        ></Label>
+        padding="20">
+
+        <Label text="Button: Primary" class="section-title"></Label>
 
         <MDButton class="button text" text="Zeplin" backgroundColor="#fe5000" borderRadius="50"></MDButton>
-
         <StackLayout class="button" backgroundColor="#fe5000" borderRadius="50">
             <MDActivityIndicator horizontalAlignment="center" width="30" color="white" busy="true"></MDActivityIndicator>
         </StackLayout>
 
-
-        <Label
-        text="Button: Secondary"
-        class="section-title"
-        ></Label>
+        <Label text="Button: Secondary" class="section-title"></Label>
 
         <MDButton class="button text border-props" borderRadius="50" text="Button" rippleColor="#fe5000" variant="outline"></MDButton>
-        <!-- <MDButton width="136" variant="text" height="48" class="text" text="Zeplin"  borderRadius="50"></MDButton> -->
         <StackLayout class="button text border-props m-t-20" borderRadius="50">
             <MDActivityIndicator horizontalAlignment="center" width="30" color="#fe5000" busy="true"></MDActivityIndicator>
         </StackLayout>
 
-        <MDButton
-            text="Button (Disabled)"
-            isEnabled="false"
-            (tap)="onTap($event)"
-        ></MDButton>
-        <Label
-            text="Variant: Flat"
-            class="section-title"
-        ></Label>
-        <MDButton
-            text="Button"
-            variant="flat"
-            (tap)="onTap($event)"
-        ></MDButton>
+        <Label text="Button: Sticky" class="section-title"></Label>
+        <MDButton class="button text" text="Button" backgroundColor="#fe5000"></MDButton>
 
-        <StackLayout padding="20">
-            <GridLayout columns="16, auto, 12, *, 24" borderRadius="50" rows="6, auto, 6" backgroundColor="#fe5000" >
-                    <!-- Activity -->
-                    <GridLayout col="1" row="1" columns="auto" rows="auto, *">
-                        <MDActivityIndicator width="30" busy="true"></MDActivityIndicator>
-                    </GridLayout>
-                    <!-- Text -->
-                    <Label col="3" class="text" verticalAlignment="center" row="1" textWrap="true" text="holaaa"></Label>
-            </GridLayout>
+        <Label text="Button: Sticky (Disabled)" class="section-title"></Label>
+        <MDButton class="button text" text="Button" isEnabled="false"></MDButton>
+        <StackLayout class="button" backgroundColor="#fe5000">
+            <MDActivityIndicator horizontalAlignment="center" width="30" color="white" busy="true"></MDActivityIndicator>
         </StackLayout>
 
+        <Label text="Button: Link" class="section-title"></Label>
+        <MDButton text="Link" rippleColor="#fe5000" color="#fe5000" class="button text" variant="text"></MDButton>
 
-        <MDButton
+        <!-- <StackLayout padding="20">
+            <GridLayout columns="16, auto, 12, *, 24" borderRadius="50" rows="6, auto, 6" backgroundColor="#fe5000" >
+                   <GridLayout col="1" row="1" columns="auto" rows="auto, *">
+                        <MDActivityIndicator width="30" busy="true"></MDActivityIndicator>
+                    </GridLayout>
+
+                    <Label col="3" class="text" verticalAlignment="center" row="1" textWrap="true" text="holaaa"></Label>
+            </GridLayout>
+        </StackLayout> -->
+
+
+        <!-- <MDButton
             text="Button (Disabled)"
             isEnabled="false"
             variant="flat"
@@ -113,7 +100,7 @@
             isEnabled="false"
             variant="text"
             (tap)="onTap($event)"
-        ></MDButton>
+        ></MDButton> -->
     </FlexboxLayout>
 </ScrollView>
 
