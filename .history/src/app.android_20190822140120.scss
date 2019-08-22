@@ -1,0 +1,28 @@
+// Import app variables
+@import 'app-variables';
+
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+
+// Import common styles
+@import 'app-common';
+
+// Place any CSS rules you want to apply only on Android here
+ActionBar .fa {
+    padding: 40px;
+}
+
+.text {
+    width: 72px;
+    height: 48px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #ffffff;
+  }

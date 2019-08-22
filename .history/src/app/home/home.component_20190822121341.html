@@ -1,0 +1,115 @@
+<ActionBar class="action-bar">
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Button"></Label>
+</ActionBar>
+
+<GridLayout class="page page-content">
+    <!-- <Label class="page-icon fa" text="&#xf015;"></Label>
+    <Label class="page-placeholder" text="Page content goes here"></Label> -->
+
+
+<ScrollView>
+
+    <FlexboxLayout
+        flexDirection="column"
+        justifyContent="space-around"
+        alignItems="center"
+        padding="24"
+    >
+        <Label
+            text="Variant: Contained"
+            class="section-title"
+        ></Label>
+
+
+
+        <!-- <MDButton text="Button" color="black" backgroundColor="#fe5000" borderRadius="10" elevation="10"></MDButton> -->
+
+        <MDButton text="Button" (tap)="onTap($event)"></MDButton>
+        <MDActivityIndicator width="30" busy="true"></MDActivityIndicator>
+
+        <StackLayout xmlns:mdb="nativescript-material-button" xmlns:mdfb="nativescript-material-floatingactionbutton">
+                <mdfb:FloatingActionButton id="fab" src="res://ic_action_add" backgroundColor="blue" tap="{{ onTap }}"/>
+                <mdb:Button id="button1" elevation="5" borderRadius="10" fontSize="20" text="raised button" tap="{{ onTap }}"/>
+                <mdb:Button id="button2" borderRadius="10" color="red" text="text button" rippleColor="green" backgroundColor="red" variant="text" tap="{{ onTap }}">
+                    <FormattedString>
+                        <Span text="Words " color="#006600"></Span>
+                        <Span text="with " color="#990000" fontAttributes="Bold"></Span>
+                    </FormattedString>
+                </mdb:Button>
+                <mdb:Button id="button3" text="flat button \n test" rippleColor="red" backgroundColor="yellow" variant="flat" tap="onTap"/>
+                <mdb:Button id="button4" text="flat disabled button" isEnabled="false" rippleColor="red" backgroundColor="yellow" tap="{{ onTap }}"/>
+                <mdb:Button id="button5" text="outline button" color="black" width="200" className="buttonYellow" variant="outline" tap="{{ onTap }}"/>
+                <mdb:Button id="button6" text="disabled outline button" isEnabled="false" width="200" backgroundColor="yellow" variant="outline" tap="{{ onTap }}"/>
+                <mdb:Button id="button7" text="text button" width="200" color="blue" variant="text" tap="{{ onTap }}"/>
+                <mdb:Button id="button8" text="disabled text button" isEnabled="false" width="200" backgroundColor="yellow" variant="text" tap="{{ onTap }}"/>
+                <mdb:Button id="button9" className="falseFAb" text="+" color="white" verticalAlign="center" backgroundColor="green" tap="{{ onTap }}"/>
+            </StackLayout>
+
+        <MDButton
+            text="Button (Disabled)"
+            isEnabled="false"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <Label
+            text="Variant: Flat"
+            class="section-title"
+        ></Label>
+        <MDButton
+            text="Button"
+            variant="flat"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <MDButton
+            text="Button (Disabled)"
+            isEnabled="false"
+            variant="flat"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <Label
+            text="Variant: Outlined"
+            class="section-title"
+        ></Label>
+        <MDButton
+            text="Button"
+            variant="outline"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <MDButton
+            text="Button (Disabled)"
+            variant="outline"
+            isEnabled="false"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <Label
+            text="Variant: Text"
+            class="section-title"
+        ></Label>
+        <MDButton
+            text="Button"
+            variant="text"
+            (tap)="onTap($event)"
+        ></MDButton>
+        <MDButton
+            text="Button (Disabled)"
+            isEnabled="false"
+            variant="text"
+            (tap)="onTap($event)"
+        ></MDButton>
+    </FlexboxLayout>
+</ScrollView>
+
+
+</GridLayout>

@@ -1,0 +1,54 @@
+<ActionBar class="action-bar">
+        <!--
+        Use the NavigationButton as a side-drawer button in Android
+        because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+        <!--
+        Use the ActionItem for IOS with position set to left. Using the
+        NavigationButton as a side-drawer button in iOS is not possible,
+        because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+            ios.position="left">
+        </ActionItem>
+        <Label class="action-bar-title" text="Slider"></Label>
+</ActionBar>
+
+
+
+<GridLayout class="page page-content">
+
+    <StackLayout padding="24">
+        <Label
+            text="Default Slider"
+            padding="10"></Label>
+        <MDSlider
+            elevation="3"
+            rippleColor="blue"
+            value="40"
+            minValue="0"
+            maxValue="100"></MDSlider>
+        <Label
+            text="Green slider without hollow at 0"
+            padding="10"></Label>
+        <MDSlider
+            thumbHollowAtStart="false"
+            color="green"
+            value="40"
+            minValue="0"
+            maxValue="100"></MDSlider>
+        <Label
+            text="Disabled slider"
+            padding="10"></Label>
+        <MDSlider
+            isEnabled="false"
+            value="40"
+            minValue="0"
+            maxValue="100"></MDSlider>
+    </StackLayout>
+
+</GridLayout>
+
+
+
